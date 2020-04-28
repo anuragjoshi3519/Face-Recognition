@@ -19,7 +19,7 @@ def img_to_encoding(image_path, model):
 def recognize(image_path, database, model):
     
     encoding = img_to_encoding(image_path,model)
-    
+    identity = ''
     min_dist = 200
     
     for (name, enc_list) in database.items():
