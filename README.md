@@ -5,7 +5,7 @@ Used One Shot learning to implement the system.
 
 ## Steps to use:
 
-## Run following commands on terminal:
+### For Setup, run following commands on terminal:
 
 - git clone https://github.com/anuragjoshi3519/Face-Recognition.git
 - cd Face-Recognition
@@ -14,7 +14,7 @@ Used One Shot learning to implement the system.
 - source env/bin/activate
 - pip install -r requirements.txt
 
-## Functions to call
+### Functions to call:
 
 - **$ python face_collect_data.py** : To save your face image in database
 - **$ python recognize_me.py** : To let the system recognize you.
