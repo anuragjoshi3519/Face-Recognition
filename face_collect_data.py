@@ -2,10 +2,12 @@ import cv2
 import numpy as np
 import os
 import pickle
+import warnings
+warnings.filterwarnings('ignore')
 from keras.models import load_model
 import tensorflow as tf
 
-tf.logging.set_verbosity(tf.logging.ERROR)
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 def img_to_encoding(image_path, model):
@@ -85,11 +87,11 @@ def takeImage():
             break
 
     path = image_path+str(np.random.randint(1000000))+'.png'
-    print(path)
+    #print(path)
     cv2.imwrite(path,frame_crop)
     encodeImage(path,folder_name,single=True)
-    print(frame_crop.shape)
-    print("Image saved Successfully")
+    #print(frame_crop.shape)
+    print("Image successfully saved to database.")
     
 if __name__=='__main__':
     

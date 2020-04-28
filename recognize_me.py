@@ -2,10 +2,12 @@ import cv2
 import numpy as np
 import os
 import pickle
+import warnings
+warnings.filterwarnings('ignore')
 from keras.models import load_model
 import tensorflow as tf
 
-tf.logging.set_verbosity(tf.logging.ERROR)
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 def img_to_encoding(image_path, model):
@@ -31,7 +33,7 @@ def recognize(image_path, database, model):
                 min_dist = dist
                 identity = name
     
-    if min_dist > 0.58:
+    if min_dist > 0.59:
         print("Not in the database.")
     else:
         print ("it's " + str(identity))
@@ -94,7 +96,7 @@ def main():
     
     min_dist,name = recognize(path,database,model)
     
-    print(min_dist)
+    #print(min_dist)
 
 if __name__=='__main__':
     main()
