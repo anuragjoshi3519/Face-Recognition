@@ -7,12 +7,14 @@ Used One Shot learning to implement the system.
 
 ### For Setup, run following commands on terminal:
 
-- git clone https://github.com/anuragjoshi3519/Face-Recognition.git
-- cd Face-Recognition
-- pip install virtualenv
-- virtualenv -p /usr/bin/python3 env
-- source env/bin/activate
-- pip install -r requirements.txt
+```
+git clone https://github.com/anuragjoshi3519/Face-Recognition.git
+cd Face-Recognition
+pip install virtualenv
+virtualenv -p /usr/bin/python3 env
+source env/bin/activate
+pip install -r requirements.txt
+```
 
 ### Functions to call:
 
